@@ -9,7 +9,7 @@ echo "----------------------------------"
 sudo apt install zip wget build-essential gfortran zlib1g\
  zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev\
  libcurl4-openssl-dev default-jre default-jdk git\
- libxml2-dev -y
+ libxml2-dev libssl-dev libfontconfig1-dev libsodium-dev -y
 
 
 echo "------------------"
