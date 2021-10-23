@@ -21,7 +21,7 @@ wget "https://cran.r-project.org/src/base/R-${majorRVersion}/R-${rVersion}.tar.g
 tar -xvf "R-${rVersion}.tar.gz"
 
 pushd "R-${rVersion}"
-./configure --with-readline=no --with-x=no && make
+./configure --with-readline=no --with-x=no && make -j 4
 sudo ln -s $HOME/R-${rVersion}/bin/* /usr/bin
 popd
 
