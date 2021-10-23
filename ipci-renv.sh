@@ -25,6 +25,8 @@ pushd "R-${rVersion}"
 sudo ln -s $HOME/R-${rVersion}/bin/* /usr/bin
 popd
 
+touch $HOME/.Renviron && echo -e "MAKE=${MAKE-'make -j4'}" >> $HOME/.Renviron
+
 sudo R CMD javareconf
 
 
@@ -37,6 +39,7 @@ git clone https://github.com/${githubStudy}.git
 projectDir=$HOME/${githubStudy##*/}
 
 until $HOME/ipci-renv-setup/renv-setup.R $projectDir; do
+	echo -e "Errors were observed. If relevant, install packages: "
 	read -a packages
 	sudo apt-get -y install ${packages[@]}
 done
