@@ -6,6 +6,12 @@ as `repo/project`.
 
 ## Usage
 
+First, install git on your system:
+
+```
+sudo apt install git
+```
+
 In the home directory of a virtual machine running `Ubuntu Server 16.4.X` run
 
 ```
