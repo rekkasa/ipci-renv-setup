@@ -6,7 +6,8 @@ as `repo/project`.
 
 ## Usage
 
-First, install git on your system:
+First, install git on your system. No need to update the system, as it may
+install newer versions of the build tools.
 
 ```
 sudo apt install git
